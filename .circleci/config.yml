@@ -1,17 +1,17 @@
 version: 2.1
 
-jobs: 
+jobs:
   build:
     docker:
       - image: cimg/node:18.17.1
-      steps:
-        - checkout
-        - run:
-            name: Install Dependencies
-            command: npm install
-        - run:
-            name: Build React App
-            command: npm run build
+    steps:
+      - checkout
+      - run:
+          name: Install Dependencies
+          command: npm install
+      - run:
+          name: Build React App
+          command: npm run build
 
   deploy:
     docker:
